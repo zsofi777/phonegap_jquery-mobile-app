@@ -1,6 +1,6 @@
 :iphone:
 
-## PhoneGap mobile app
+## PhoneGap Portfolio mobile app
 PhoneGap :heavy_plus_sign: jQuery Mobile
 #
 ### Installation ###
