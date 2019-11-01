@@ -31,7 +31,7 @@ connect the PhoneGap Developer app with the PhoneGap Desktop app by typing the s
 
 ### OR ###
 create a config.xml file
-- example config.xml code: http://docs.phonegap.com/phonegap-bui... 
+- example config.xml code: http://docs.phonegap.com/phonegap-build 
 and an html file
 - minimum html code: https://www.w3schools.com/html/
 
