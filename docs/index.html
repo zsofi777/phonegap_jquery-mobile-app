@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
+    />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *;
+               style-src *; script-src *; 'unsafe-eval'; img-src *; img-src * filesystem: data:"
+    />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+
+    <link
+      rel="shortcut icon"
+      href="https://farm2.staticflickr.com/1868/buddyicons/4546398@N21_r.jpg?1535381497"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Z7</title>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).on("mobileinit", function() {
+        //mobileinit = jquery.mobile-1.4.5.js
+        $.mobile.defaultPageTransition = "slide";
+      });
+    </script>
+    <script type="text/javascript" src="./js/jquery.mobile-1.4.5.js"></script>
+    <script
+      type="text/javascript"
+      src="./js/jquery.mobile-1.4.5.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.11.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- 1. page -->
+
+    <div data-role="page" class="ui-mobile" id="home">
+      <div data-role="navbar" data-grid="c">
+        <!-- NAVBAR -->
+        <ul>
+          <li><a href="#home" class="ui-state-persist">home</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+
+      <div data-role="header">
+        <!-- HEADER -->
+      </div>
+      <div id="landing"></div>
+      <div role="main" class="ui-content">
+        <!-- CONTENT -->
+        <h2 class="main">Zsófia Kővágó</h2>
+        <p>FULL STACK DEVELOPER</p>
+      
+      </div>
+
+      <div data-role="footer" id="footer">
+        <!-- FOOTER -->
+        <p id="footerP"></p>
+      </div> 
+    </div>
+    <!-- 2. page -->
+
+    <div data-role="page" id="portfolio">
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home" data-direction="reverse">home</a></li>
+          <li><a href="#portfolio" class="ui-state-persist">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2 class="header">portfolio</h2>
+        <p>of PET PROJECTS</p>
+      </div>
+
+      <div class="row">
+        <div id="column1" class="column">
+          <a href="#sub1">
+            <img alt="audio-player"
+              src="https://raw.githubusercontent.com/zsofi777/audio-player/master/screenShots/screenShot1.jpg"
+            />
+          </a>
+          <a href="#sub1">
+            <img alt="audio-player"
+              src="https://raw.githubusercontent.com/zsofi777/audio-player/master/screenShots/screenShot2.jpg"
+            />
+          </a>
+          <a href="#sub1">
+            <img alt="audio-player"
+              src="https://raw.githubusercontent.com/zsofi777/audio-player/master/screenShots/screenShot3.jpg"
+            />
+          </a>
+          <a href="#sub2">
+            <img alt="figma-projects"
+              src="https://raw.githubusercontent.com/zsofi777/figma-projects/master/Homepage.jpg"
+            />
+          </a>
+          <a href="#sub2">
+            <img alt="figma-projects"
+              src="https://raw.githubusercontent.com/zsofi777/figma-projects/master/Report.jpg"
+            />
+          </a>
+          <a href="#sub2">
+            <img alt="figma-projects"
+              src="https://raw.githubusercontent.com/zsofi777/figma-projects/master/Webshop.jpg"
+            />
+          </a>
+        </div>
+        <div class="column">
+          <a href="#sub2">
+            <img alt="figma-projects"
+              src="https://raw.githubusercontent.com/zsofi777/figma-projects/master/Chat.jpg"
+            />
+          </a>
+          <a href="#sub3">
+            <img alt="figma-api"
+              src="https://images.ctfassets.net/1khq4uysbvty/5PMX6plL4Qso8i84eKMmq/415626d89b71eeedb6d4af551bdb1cd6/Figma_API_Meta.png"
+            />
+          </a>
+          <a href="#sub4">
+            <img alt="first-mobile-app"
+              src="https://raw.githubusercontent.com/zsofi777/first-mobile-app/master/ScreenShots/rnApp1.png"
+            />
+          </a>
+          <a href="#sub4">
+            <img alt="first-mobile-app"
+              src="https://raw.githubusercontent.com/zsofi777/first-mobile-app/master/ScreenShots/rnApp2.png"
+            />
+          </a>
+        </div>
+        <div id="column3" class="column">
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot1.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot2.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot3.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot4.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot5.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot6.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot7.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot8.jpg"
+            />
+          </a>
+        </div>
+        <div id="column4" class="column">
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot9.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot10.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot11.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot12.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot13.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot14.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot15.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot16.jpg"
+            />
+          </a>
+          <a href="#sub5">
+            <img alt="space-game_frontend"
+              src="https://raw.githubusercontent.com/zsofi777/space-game_frontend/master/ScreenShots/screenShot17.jpg"
+            />
+          </a>
+        </div>
+        <div id="column5" class="column">
+          <a href="#sub6">
+            <img alt="t-shirt-gallery"
+              src="https://raw.githubusercontent.com/zsofi777/t-shirt-gallery/master/screenShots.jpg/screenShot1.jpg"
+            />
+          </a>
+          <a href="#sub6">
+            <img alt="t-shirt-gallery"
+              src="https://raw.githubusercontent.com/zsofi777/t-shirt-gallery/master/screenShots.jpg/screenShot2.jpg"
+            />
+          </a>
+          <a href="#sub7">
+            <img alt="vue-binding"
+              src="https://raw.githubusercontent.com/zsofi777/vue-binding/master/screenShots/screenShot1.jpg"
+            />
+          </a>
+          <a href="#sub7">
+            <img alt="vue-binding"
+              src="https://raw.githubusercontent.com/zsofi777/vue-binding/master/screenShots/screenShot2.jpg"
+            />
+          </a>
+          <a href="#sub8">
+            <img alt="todo-app"
+              src="https://raw.githubusercontent.com/zsofi777/todo-app/master/screenShots/screenShot1.jpg"
+            />
+          </a>
+          <a href="#sub8">
+            <img alt="todo-app"
+              src="https://raw.githubusercontent.com/zsofi777/todo-app/master/screenShots/screenShot2.jpg"
+            />
+          </a>
+        </div>
+      </div>
+      <div data-role="footer" id="footer" data-position="fixed">
+        <!-- FOOTER -->
+        <p id="footerP"></p>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub1">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img id="subImg" src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/audio-player">
+          <p>https://github.com/zsofi777/audio-player</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub2">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/figma-projects">
+          <p>https://github.com/zsofi777/figma-projects</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub3">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/figma-api">
+          <p>https://github.com/zsofi777/figma-api</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub4">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/first-mobile-app">
+          <p>https://github.com/zsofi777/first-mobile-app</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub5">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/space-game_frontend">
+          <p>https://github.com/zsofi777/space-game_frontend</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub6">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/t-shirt-gallery">
+          <p>https://github.com/zsofi777/t-shirt-gallery</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub7">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/vue-binding">
+          <p>https://github.com/zsofi777/vue-binding</p>
+        </a>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub8">
+      <div data-role="header">
+        <a id="backBG" href="#portfolio" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://github.com/zsofi777/todo-app">
+          <p>https://github.com/zsofi777/todo-app</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. page -->
+
+    <div data-role="page" id="about">
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home" data-direction="reverse">home</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about" class="ui-state-persist">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2 class="about">about me</h2>
+        <p style="margin-bottom:10px;">
+          As a career changing Statistician presently I am searching for a great
+          opportunity <br />
+          to collaborate with other Developers and work closely with Clients,
+          <br />
+          to improve my skills, knowledge and experience. <br />
+          And never stop learning.
+        </p>
+        <p style="font-weight:bold;margin-top:15px;">
+          INDUSTRY KNOWLEDGE
+        </p>
+        <p style="font-size:14px;">
+          Programming &#9899; UI Design &#9899; Statistics &#9899; Research
+          &#9899; Marketing
+        </p>
+        <p style="font-weight:bold;margin-top:15px;">
+          TOOLS & TECHNOLOGIES
+        </p>
+        <p style="font-size:14px;">
+          HTML &#9899; CSS &#9899; JavaScript &#9899; TypeScript &#9899;
+          React.js &#9899; Redux.js &#9899; Express.js &#9899; SAGA &#9899;
+          MongoDB &#9899; SQL &#9899; Mocha &#9899; REST API &#9899; Node.js
+          &#9899; C &#9899; C++ &#9899; Embedded C &#9899; Google Test &#9899;
+          SPSS &#9899; R &#9899; Git &#9899; Github &#9899; Command Prompt
+          &#9899; Atom &#9899; Visual Studio &#9899; Clion &#9899; Microsoft
+          Office
+        </p>
+        <p style="font-weight:bold;margin-top:15px;">
+          INTERPERSONAL SKILLS
+        </p>
+        <p style="font-size:14px;">
+          Empathy &#9899; Communication &#9899; Teamwork &#9899; Management
+          &#9899; Problem Solving &#9899; Lifelong Learning
+        </p>
+      </div>
+      <a href="#sub9" class="cv">
+        <img
+          src="https://raw.githubusercontent.com/zsofi777/phonegap_jquery-mobile-app/master/phonegap_jquery-mobile-app/www/img/CV.jpg"
+          class="cvImg"
+          alt="CV image"
+        />
+      </a>
+
+      <div data-role="footer" id="footer" data-position="fixed">
+        <!-- FOOTER -->
+        <p id="footerP"></p>
+      </div>
+    </div>
+
+    <div data-role="page" id="sub9">
+      <div data-role="header">
+        <a id="backBG" href="#about" data-direction="reverse" class="ui-btn">
+          <img src="https://img.icons8.com/carbon-copy/2x/back.png"
+        /></a>
+      </div>
+      <div role="main" class="ui-content" id="subLink">
+        <a href="https://raw.githubusercontent.com/zsofi777/phonegap_jquery-mobile-app/master/Zsofia_Kovago_CV.jpg">
+        <p id="cvLink">LINK</p>
+        </a>
+      </div>
+    </div>
+
+    
+    <!-- 4. page -->
+
+    <div data-role="page" id="contact">
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home" data-direction="reverse">home</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact" class="ui-state-persist">contact</a></li>
+        </ul>
+      </div>
+
+      <div role="main" class="ui-content" id="contactTitle">
+        <h2 id="contactH2">contact me</h2>
+      </div>
+
+      <ul class="contact">
+        <li>
+          <a href="tel:+36702415424">
+            <img
+              id="phoneImg"
+              src="https://raw.githubusercontent.com/zsofi777/phonegap_jquery-mobile-app/master/phonegap_jquery-mobile-app/www/img/phone.jpg"
+            />
+          </a>
+          <p>+36-70-241-5424</p>
+        </li>
+        <li>
+          <a href="mailto:kovagozsofia@gmail.com">
+            <img
+              id="mailImg"
+              src="https://raw.githubusercontent.com/zsofi777/phonegap_jquery-mobile-app/master/phonegap_jquery-mobile-app/www/img/mail.jpg"
+            />
+          </a>
+          <p>kovagozsofia@gmail.com</p>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/kovagozsofia">
+            <img
+              id="linkImg"
+              src="https://raw.githubusercontent.com/zsofi777/phonegap_jquery-mobile-app/master/phonegap_jquery-mobile-app/www/img/linkedin.jpg"
+            />
+          </a>
+          <p>linkedin.com/in/kovagozsofia</p>
+        </li>
+        <li>
+          <a href="https://github.com/zsofi777">
+            <img
+              id="gitImg"
+              src="https://raw.githubusercontent.com/zsofi777/phonegap_jquery-mobile-app/master/phonegap_jquery-mobile-app/www/img/github.png"
+            />
+          </a>
+          <p>github.com/zsofi777</p>
+        </li>
+      </ul>
+
+      <div data-role="footer" id="footer" data-position="fixed">
+        <!-- FOOTER -->
+        <p id="footerP"></p>
+      </div>
+    </div>
+  </body>
+</html>
