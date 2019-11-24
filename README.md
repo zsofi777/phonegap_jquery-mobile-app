@@ -2,6 +2,8 @@
 
 ## PhoneGap Portfolio mobile app
 PhoneGap :heavy_plus_sign: jQuery Mobile
+
+:arrow_forward: [DEMO](https://zsofi777.github.io/phonegap_jquery-mobile-app/)
 #
 ### Installation ###
 
